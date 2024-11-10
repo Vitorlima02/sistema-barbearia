@@ -1,14 +1,11 @@
 public class Employee extends Person {
-    private int id;
     private double salary;
     private String position;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public Employee(int id, String name, String cpf, String email, double salary, String position) {
+        super(id, name, cpf, email);
+        this.salary = salary;
+        this.position = position;
     }
 
     public double getSalary() {
