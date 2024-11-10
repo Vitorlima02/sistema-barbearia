@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class PersonDbUser {
@@ -19,5 +20,15 @@ public class PersonDbUser {
             }
         }
         return null;
+    }
+
+    public void updateUser(String name, String cpf, String email, int id, Date dateOfBirth, String gender) {
+        Person user = getPersonById(id);
+        if (user != null) {
+            user.setName(name);
+            user.setCpf(cpf);
+            user.setEmail(email);
+            user.setId((id));
+        }
     }
 }
