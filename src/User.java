@@ -1,16 +1,13 @@
 import java.util.Date;
 
 public class User extends  Person {
-    private int id;
     private Date dateOfBirth;
     private String gender;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public User(String name, String cpf, String email, int id, Date dateOfBirth, String gender) {
+        super(id, name, cpf, email);
+        this.dateOfBirth = dateOfBirth;
+        this.gender = gender;
     }
 
     public Date getDateOfBirth() {
