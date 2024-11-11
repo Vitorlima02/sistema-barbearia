@@ -24,7 +24,7 @@ public class Main {
                     createEmployee();
                     break;
                 case 3:
-                    showEmployee();
+                    showAgendaMenu();
                     break;
                 case 0:
                     System.out.println("Encerrando o programa...");
@@ -40,7 +40,7 @@ public class Main {
         System.out.println("=============================");
         System.out.println("--1: Cadastrar Cliente");
         System.out.println("--2: Cadastrar Funcionario");
-        System.out.println("--3: Listar Funcionarios");
+        System.out.println("--3: Consulta de Agenda");
         System.out.println("--0: Sair");
         System.out.println("Informe a opção desejada: ");
     }
@@ -54,7 +54,7 @@ public class Main {
         String email = sc.nextLine();
         System.out.println("Digite sua data de nascimento YYYY-MM-DD: ");
         String dataNascimento = sc.nextLine();
-        SimpleDateFormat f = new SimpleDateFormat("YYYY-MM-DD");
+        SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd");
         Date format = f.parse(dataNascimento);
         System.out.println("Digite o genero: ");
         String genero = sc.nextLine();
@@ -85,6 +85,29 @@ public class Main {
             System.out.println("E-mail: " + employee.getEmail());
             System.out.println("Cargo: " + employee.getPosition());
             System.out.println("Salario: " + employee.getSalary());
+        }
+    }
+
+    public static void showAgendaMenu() throws ParseException {
+        System.out.println("Opções de consulta de Agenda");
+        System.out.println("=============================");
+        System.out.println("--1: Listar profissionais");
+        System.out.println("--2: Agendar atendimento");
+        System.out.println("--0: Voltar");
+
+        int choice = sc.nextInt();
+        sc.nextLine();
+        switch (choice) {
+            case 1:
+                showEmployee();
+                break;
+            case 2:
+                //ScheduleAppointment();
+                break;
+            case 0:
+                return;
+            default:
+                System.out.println("Opção inválida, tente novamente.");
         }
     }
 }
