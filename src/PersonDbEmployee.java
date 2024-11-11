@@ -12,13 +12,22 @@ public class PersonDbEmployee {
         return employees;
     }
 
-    public Employee getEmployee(int id) {
+    public Employee getEmployeeById(int id) {
         for (Employee employee : employees) {
             if (employee.getId() == id) {
                 return employee;
             }
         }
         return null;
+    }
+
+    public void updateEmployee(int id, String name, String cpf, String email) {
+        Person employee = getEmployeeById(id);
+        if (employee != null) {
+            employee.setName(name);
+            employee.setCpf(cpf);
+            employee.setEmail(email);
+        }
     }
 
 }

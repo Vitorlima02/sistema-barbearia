@@ -22,7 +22,7 @@ public class PersonDbUser {
         return null;
     }
 
-    public void updateUser(String name, String cpf, String email, int id, Date dateOfBirth, String gender) {
+    public void updateUser(String name, String cpf, String email, int id) {
         Person user = getPersonById(id);
         if (user != null) {
             user.setName(name);
