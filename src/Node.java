@@ -1,9 +1,9 @@
 public class Node {
-    User user;
+    Person data;
     Node left, right;
 
-    public Node(User user) {
-        this.user = user;
+    public Node(Person data) {
+        this.data = data;
         left = right = null;
     }
 }
