@@ -20,4 +20,28 @@ public class BinaryTree {
         }
         return root;
     }
+
+    public void inOrder(Node root) {
+        if (root != null) {
+            inOrder(root.left);
+            System.out.print("Id: " + root.user.getId() + "Nome: " + root.user.getName());
+            inOrder(root.right);
+        }
+    }
+
+    public void preOrder(Node root) {
+        if (root != null) {
+            System.out.print("Id: " + root.user.getId() + "Nome: " + root.user.getName());
+            preOrder(root.left);
+            preOrder(root.right);
+        }
+    }
+
+    public void postOrder(Node root) {
+        if (root != null) {
+            postOrder(root.left);
+            postOrder(root.right);
+            System.out.print("Id: " + root.user.getId() + "Nome: " + root.user.getName());
+        }
+    }
 }
