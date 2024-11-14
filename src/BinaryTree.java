@@ -24,14 +24,14 @@ public class BinaryTree {
     public void inOrder(Node root) {
         if (root != null) {
             inOrder(root.left);
-            System.out.print("Id: " + root.data.getId() + "Nome: " + root.data.getName());
+            System.out.print("Id: " + root.data.getId() + "\nNome: " + root.data.getName());
             inOrder(root.right);
         }
     }
 
     public void preOrder(Node root) {
         if (root != null) {
-            System.out.print("Id: " + root.data.getId() + "Nome: " + root.data.getName());
+            System.out.print("Id: " + root.data.getId() + "\nNome: " + root.data.getName());
             preOrder(root.left);
             preOrder(root.right);
         }
@@ -57,5 +57,14 @@ public class BinaryTree {
 
     public Person searchPerson(int id) {
         return search(root, id);
+    }
+
+    public void printTree() {
+        System.out.println("Exibindo arvore em ordem: ");
+        inOrder(root);
+//        System.out.println("Exibindo em pos-ordem");
+//        postOrder(root);
+//        System.out.println("Exibindo em pre-ordem");
+//        preOrder(root);
     }
 }

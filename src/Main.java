@@ -33,8 +33,11 @@ public class Main {
                     showUsers();
                     showEmployee();
                     break;
+                case 6:
+                    System.out.println("Resumo do seu agendamento");
+                    binaryTree.printTree();
                 case 0:
-                    System.out.println("Encerrando o programa...");
+                    System.out.println("\nEncerrando o programa...");
                     return;
             }
         }
