@@ -49,6 +49,12 @@ public class Main {
         System.out.println("--2: Cadastrar Funcionario");
         System.out.println("--3: Consulta de Agenda");
         System.out.println("--4: Listar Clientes e Funcionarios");
+        System.out.println("--5: Login User");
+        System.out.println("--6: Consultar suas reservas");
+        System.out.println("--7: Cancelar reserva");
+        System.out.println("--8: Avaliar seu atendimento");
+        System.out.println("--9: Realizar pagamento");
+        System.out.println("--10: Relatorio");
         System.out.println("--0: Sair");
         System.out.println("Informe a opção desejada: ");
     }
