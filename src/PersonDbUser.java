@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class PersonDbUser {
@@ -29,6 +28,12 @@ public class PersonDbUser {
             user.setCpf(cpf);
             user.setEmail(email);
             user.setId((id));
+        }
+    }
+
+    public void printUsers() {
+        for (Person person : persons) {
+            System.out.println("Id: " + person.getId() + " " + person.getName() + " " + person.getCpf() + " " + person.getEmail());
         }
     }
 }

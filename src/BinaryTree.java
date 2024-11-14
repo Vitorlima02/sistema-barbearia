@@ -13,9 +13,9 @@ public class BinaryTree {
         if (root == null) {
             return new Node(person);
         }
-        if (person.getId() < root.data.getId()) {
+        if (person.getName().compareTo(root.data.getName()) < 0) {
             root.left = insertRecursively(root.left, person);
-        } else if (person.getId() > root.data.getId()) {
+        } else if (person.getName().compareTo(root.data.getName()) > 0) {
             root.right = insertRecursively(root.right, person);
         }
         return root;

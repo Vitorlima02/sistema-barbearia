@@ -30,4 +30,10 @@ public class PersonDbEmployee {
         }
     }
 
+    public void printEmployees() {
+        for (Person person : employees) {
+            System.out.println("Id: " + person.getId() + " Name: " + person.getName() + " CPF: " + person.getCpf() + " Email: " + person.getEmail());
+        }
+    }
+
 }
